@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="restoredb2" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=dqiy5gu0pt.database.windows.net;Initial Catalog=restoredb2;Persist Security Info=True;User ID=azurepass" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="YasaiKensaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Inspector" Member="Inspector">
+    <Type Name="Inspector">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.edicode" Member="edicode">
+    <Type Name="edicode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="大分類コード" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="大分類名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="中分類コード" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="中分類名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="青果標準品名コード" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="栽培区分" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="品名表記漢字" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="品名表記カナ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ベジフルコード" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="別称" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="備考" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="青果共通商品コード" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZipCode" Member="ZipCode">
+    <Type Name="ZipCode">
+      <Column Name="全国地方公共団体コードID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="旧郵便番号" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="郵便番号" Type="System.String" DbType="NVarChar(7)" CanBeNull="true" />
+      <Column Name="都道府県名かな" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="市区町村名かな" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="町域名かな" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="都道府県名" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="市区町村名" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="町域名" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="一町域が二以上の郵便番号で表される場合の表示" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="小字毎に番地が起番されている町域の表示" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="丁目を有する町域の場合の表示" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="一つの郵便番号で二以上の町域を表す場合の表示" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="更新の表示" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="変更理由" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Category">
+    <Type Name="Category">
+      <Column Name="No" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrefCode" Member="PrefCode">
+    <Type Name="PrefCode">
+      <Column Name="No" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KEN_ALL" Member="KEN_ALL">
+    <Type Name="KEN_ALL">
+      <Column Name="自治体コード" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="旧郵便番号" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="郵便番号" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="都道府県名カナ" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="市区町村名かな" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="町域名かな" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="都道府県名" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="市区町村名" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="町域名" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="一町域が二以上の郵便番号で表される場合の表示" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="小字毎に番地が起番されている町域の表示" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="丁目を有する町域の場合の表示" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="一つの郵便番号で二以上の町域を表す場合の表示" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="更新の表示" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="変更理由" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YasaiName" Member="YasaiName">
+    <Type Name="YasaiName">
+      <Column Name="品目" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="補正" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="大分類名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="中分類名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="別名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YasaiKensa" Member="YasaiKensa">
+    <Type Name="YasaiKensa">
+      <Column Name="No" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="実施主体" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="産地都道府県" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="産地市町村" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="農場採取流通品" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="食品カテゴリ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="品目" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="検査機関" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="採取日" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果判明日" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="厚生省発表日" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果ヨウ素131" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果セシウム134" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果セシウム137" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果セシウム" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="出展" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="登録日" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="更新日" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="採取日D" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="公表日D" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="判明日D" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ヨウ素131D" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="セシウム134D" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="セシウム137D" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="セシウムD" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="野菜分類" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="野菜品名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Place_YasaiKensa" Member="Place" ThisKey="産地都道府県,産地市町村" OtherKey="県,市" Type="Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_YasaiKensa" Member="Temp_YasaiKensa">
+    <Type Name="Temp_YasaiKensa">
+      <Column Name="No" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="実施主体" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="産地都道府県" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="産地市町村" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="農場採取流通品" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="食品カテゴリ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="品目" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="検査機関" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="採取日" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果判明日" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="厚生省発表日" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果ヨウ素131" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果セシウム134" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果セシウム137" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="結果セシウム" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="出展" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="登録日" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="更新日" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="採取日D" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="公表日D" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="判明日D" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ヨウ素131D" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="セシウム134D" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="セシウム137D" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="セシウムD" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="野菜分類" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="野菜品名" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Place" Member="Place">
+    <Type Name="Place">
+      <Column Name="県" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="市" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="緯度" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="経度" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="距離" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="方位" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Association Name="Place_YasaiKensa" Member="YasaiKensa" ThisKey="県,市" OtherKey="産地都道府県,産地市町村" Type="YasaiKensa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Map" Member="Map">
+    <Type Name="Map">
+      <Column Name="産地都道府県" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="産地市町村" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="データ数" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="経度" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="緯度" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="距離" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="方位" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="I131" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Cs" Type="System.Decimal" DbType="Decimal(12,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShippingRestriction" Member="ShippingRestriction">
+    <Type Name="ShippingRestriction">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrefName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityFilterMode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductFilterMode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BeginDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="ShippingRestrictedCity_ShippingRestriction" Member="ShippingRestrictedCity" ThisKey="Code" OtherKey="ShippingRestrictionCode" Type="ShippingRestrictedCity" IsForeignKey="true" />
+      <Association Name="ShippingRestrictedProduct_ShippingRestriction" Member="ShippingRestrictedProduct" ThisKey="Code" OtherKey="ShippingRestrictionCode" Type="ShippingRestrictedProduct" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShippingRestrictedProduct" Member="ShippingRestrictedProduct">
+    <Type Name="ShippingRestrictedProduct">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShippingRestrictionCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ShippingRestrictedProduct_ShippingRestriction" Member="ShippingRestriction" ThisKey="ShippingRestrictionCode" OtherKey="Code" Type="ShippingRestriction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShippingRestrictedCity" Member="ShippingRestrictedCity">
+    <Type Name="ShippingRestrictedCity">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShippingRestrictionCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ShippingRestrictedCity_ShippingRestriction" Member="ShippingRestriction" ThisKey="ShippingRestrictionCode" OtherKey="Code" Type="ShippingRestriction" />
+    </Type>
+  </Table>
+</Database>

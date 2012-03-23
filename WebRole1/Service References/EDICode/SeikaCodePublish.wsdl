@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s0="http://edicode.vips.gr.jp/SeikaCodePublish" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://edicode.vips.gr.jp/SeikaCodePublish" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://edicode.vips.gr.jp/SeikaCodePublish">
+      <s:element name="GetCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryResult" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfString" nillable="true" type="s0:ArrayOfString" />
+    </s:schema>
+  </types>
+  <message name="GetCategorySoapIn">
+    <part name="parameters" element="s0:GetCategory" />
+  </message>
+  <message name="GetCategorySoapOut">
+    <part name="parameters" element="s0:GetCategoryResponse" />
+  </message>
+  <message name="GetDataSoapIn">
+    <part name="parameters" element="s0:GetData" />
+  </message>
+  <message name="GetDataSoapOut">
+    <part name="parameters" element="s0:GetDataResponse" />
+  </message>
+  <message name="GetCategoryHttpGetIn">
+    <part name="Name" type="s:string" />
+  </message>
+  <message name="GetCategoryHttpGetOut">
+    <part name="Body" element="s0:ArrayOfString" />
+  </message>
+  <message name="GetDataHttpGetIn">
+    <part name="Name" type="s:string" />
+  </message>
+  <message name="GetDataHttpGetOut">
+    <part name="Body" />
+  </message>
+  <message name="GetCategoryHttpPostIn">
+    <part name="Name" type="s:string" />
+  </message>
+  <message name="GetCategoryHttpPostOut">
+    <part name="Body" element="s0:ArrayOfString" />
+  </message>
+  <message name="GetDataHttpPostIn">
+    <part name="Name" type="s:string" />
+  </message>
+  <message name="GetDataHttpPostOut">
+    <part name="Body" />
+  </message>
+  <portType name="SeikaCodePublishSoap">
+    <operation name="GetCategory">
+      <input message="s0:GetCategorySoapIn" />
+      <output message="s0:GetCategorySoapOut" />
+    </operation>
+    <operation name="GetData">
+      <input message="s0:GetDataSoapIn" />
+      <output message="s0:GetDataSoapOut" />
+    </operation>
+  </portType>
+  <portType name="SeikaCodePublishHttpGet">
+    <operation name="GetCategory">
+      <input message="s0:GetCategoryHttpGetIn" />
+      <output message="s0:GetCategoryHttpGetOut" />
+    </operation>
+    <operation name="GetData">
+      <input message="s0:GetDataHttpGetIn" />
+      <output message="s0:GetDataHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="SeikaCodePublishHttpPost">
+    <operation name="GetCategory">
+      <input message="s0:GetCategoryHttpPostIn" />
+      <output message="s0:GetCategoryHttpPostOut" />
+    </operation>
+    <operation name="GetData">
+      <input message="s0:GetDataHttpPostIn" />
+      <output message="s0:GetDataHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="SeikaCodePublishSoap" type="s0:SeikaCodePublishSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetCategory">
+      <soap:operation soapAction="http://edicode.vips.gr.jp/SeikaCodePublish/GetCategory" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetData">
+      <soap:operation soapAction="http://edicode.vips.gr.jp/SeikaCodePublish/GetData" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SeikaCodePublishHttpGet" type="s0:SeikaCodePublishHttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetCategory">
+      <http:operation location="/GetCategory" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetData">
+      <http:operation location="/GetData" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SeikaCodePublishHttpPost" type="s0:SeikaCodePublishHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetCategory">
+      <http:operation location="/GetCategory" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetData">
+      <http:operation location="/GetData" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:content part="Body" type="text/xml" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SeikaCodePublish">
+    <port name="SeikaCodePublishSoap" binding="s0:SeikaCodePublishSoap">
+      <soap:address location="http://edicode.vips.gr.jp/SeikaCodePublish.asmx" />
+    </port>
+    <port name="SeikaCodePublishHttpGet" binding="s0:SeikaCodePublishHttpGet">
+      <http:address location="http://edicode.vips.gr.jp/SeikaCodePublish.asmx" />
+    </port>
+    <port name="SeikaCodePublishHttpPost" binding="s0:SeikaCodePublishHttpPost">
+      <http:address location="http://edicode.vips.gr.jp/SeikaCodePublish.asmx" />
+    </port>
+  </service>
+</definitions>

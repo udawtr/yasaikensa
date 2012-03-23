@@ -1,0 +1,138 @@
+﻿div.field
+{
+    background-color: Gray;
+    margin-right: 10px;
+    float:left;
+    margin-bottom: 2px;
+}
+
+div.field-header
+{
+    min-height:22px;
+    min-width: 50px;
+    text-align:center;
+    background-color: Gray;
+    color: White;
+    line-height: 22px;
+    vertical-align: middle;
+    float: left;
+}
+
+div.field-body
+{
+    background-color: White;
+    min-height:22px;
+    float: left;
+    padding: 2px;
+    text-wrap: none;
+}
+
+div#search-condition
+{
+    margin-left: 10px;
+    float: left;
+}
+
+div#search-command
+{
+    float:left; 
+    margin-left:5px;
+}
+
+br 
+{
+    clear:both;
+}
+
+fieldset
+{
+    min-width:320px;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset input[type="button"]
+{
+    margin:0;
+    padding:0;
+    width: 80px;
+    height: 40px;
+}
+
+div#message
+{
+    background: white;
+    font-weight: bold;   
+}
+
+
+div#chart
+{
+}
+
+div#chart-left
+{
+    width: 800px;
+    float:left;
+}
+
+div#chart-right
+{
+    float:left;
+    max-width: 500px;
+}
+
+div#chart div.caption
+{
+    float: left;
+    padding: 2px;
+    min-width: 45px;
+    background-color: Gray;
+    color: White;
+    text-align: center;
+}
+
+div#chart div.content
+{
+    margin-left: 5px;
+    float:left;
+}
+
+div#chart div#area-list,div#implementingbody-list
+{
+}
+
+div#chart ul,li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    background-color: White;
+}
+
+div#chart ul
+{
+    float:left;
+}
+
+div#chart li
+{
+    display: inline;
+}
+
+div#pref-chart
+{
+    float:left;
+    margin-left: 80px;
+}
+
+div#chart-description p
+{
+    margin-left: 80px;
+}
+
+div#message
+{
+    padding: 5px;
+}
+

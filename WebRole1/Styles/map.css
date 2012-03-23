@@ -1,0 +1,35 @@
+﻿div.field
+{
+    background-color: Gray;
+    margin-right: 10px;
+    float:left;
+    margin-bottom: 2px;
+}
+
+div.field-header
+{
+    min-height:22px;
+    min-width: 50px;
+    text-align:center;
+    background-color: Gray;
+    color: White;
+    line-height: 22px;
+    vertical-align: middle;
+    float: left;
+    padding: 0 5px;
+}
+
+div.field-body
+{
+    background-color: White;
+    min-height:22px;
+    float: left;
+    padding: 2px;
+    text-wrap: none;
+}
+
+div#search-condition
+{
+    margin-left: 10px;
+    float: left;
+}

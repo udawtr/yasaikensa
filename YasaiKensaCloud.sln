@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole1", "WebRole1\WebRole1.csproj", "{2E4F07F5-2F58-4F7D-8F5A-771E0EA2ED7B}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "YasaiKensaCloud", "YasaiKensaCloud\YasaiKensaCloud.ccproj", "{02B064C8-3773-4570-A2F9-37E996362EBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E4F07F5-2F58-4F7D-8F5A-771E0EA2ED7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4F07F5-2F58-4F7D-8F5A-771E0EA2ED7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4F07F5-2F58-4F7D-8F5A-771E0EA2ED7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4F07F5-2F58-4F7D-8F5A-771E0EA2ED7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02B064C8-3773-4570-A2F9-37E996362EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B064C8-3773-4570-A2F9-37E996362EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B064C8-3773-4570-A2F9-37E996362EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B064C8-3773-4570-A2F9-37E996362EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

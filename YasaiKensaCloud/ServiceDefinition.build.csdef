@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  **********************************************************************************************
+
+  このファイルはツールによってプロジェクト ファイルから生成されました: ServiceDefinition.csdef
+
+  このファイルへの変更は、正しくない動作の原因となる場合があり、ファイルが再生成されると失われます。
+
+  **********************************************************************************************
+-->
+<ServiceDefinition name="YasaiKensaCloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="WebRole1" vmsize="ExtraSmall">
+    <Startup>
+      <Task commandLine="EnableCompression.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+  </WebRole>
+</ServiceDefinition>
