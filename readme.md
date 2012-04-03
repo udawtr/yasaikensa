@@ -10,13 +10,15 @@
 
 福島第一原発事故を受けて急ぎ作ったプログラムがほぼそのままの状態での公開になります。
 
+全データのExcel形式ファイルは alldata.xlsx です。
+https://github.com/udawtr/yasaikensa/blob/master/alldata.xlsx
+
 ###動作開発環境
 - Microsoft Windows Azure (WebRole + SQL Azure)
 - Micorsoft Visual Studio 2010
 - ASP.NET 3.5
 - C#
 
-### データの復元
+### DBスキーマの復元
 - SQL Azure Migration Wizard を使って行います。
-
-
+- データは WebRole1\App_Data\*.{sql|data} です。
